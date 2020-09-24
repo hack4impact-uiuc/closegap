@@ -2,6 +2,15 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
+  "scripts": {
+    "format": "prettier --write \"./**/*.{js,jsx,json,md,css,scss}\"",
+    "format:check": "prettier --check \"./**/*.{js,jsx,json,md,css,scss}\"",
+    "lint": "eslint \"./**/*.{js,jsx}\"",
+    "lint:fix": "eslint --fix \"./**/*.{js,jsx}\"",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "eject": "react-scripts eject"
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
@@ -10,14 +19,9 @@
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.3"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
+  "devDependencies": {
+    "@h4iuiuc/eslint-plugin": "^1.1.11",
+    "prettier": "^2.0.5"
   },
   "browserslist": {
     "production": [
