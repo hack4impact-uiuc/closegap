@@ -1,44 +1,32 @@
 {
   "$schema": "http://interagent.github.io/interagent-hyper-schema",
-  "type": [
-    "object"
-  ],
+  "type": ["object"],
   "definitions": {
     "admin_text": {
       "$schema": "http://json-schema.org/draft-04/hyper-schema",
       "title": "Rentrebel - Admin Texts",
       "description": "An admin text is a text for an admin area",
       "stability": "prototype",
-      "type": [
-        "object"
-      ],
+      "type": ["object"],
       "definitions": {
         "id": {
           "description": "unique identifier of the Admin Text",
           "readOnly": true,
-          "type": [
-            "integer"
-          ]
+          "type": ["integer"]
         },
         "tag": {
           "description": "the tag that references the admin text",
           "readOnly": true,
-          "type": [
-            "string"
-          ]
+          "type": ["string"]
         },
         "text": {
           "description": "the content of admin text",
           "readOnly": true,
-          "type": [
-            "string"
-          ]
+          "type": ["string"]
         },
         "tag_with_text": {
           "description": "key-value pair with the tag and the corresponding text",
-          "type": [
-            "object"
-          ],
+          "type": ["object"],
           "properties": {
             "tag": {
               "$ref": "#/definitions/admin_text/definitions/tag"
@@ -66,24 +54,18 @@
             "additionalProperties": false,
             "properties": {
               "tags": {
-                "type": [
-                  "array"
-                ],
+                "type": ["array"],
                 "items": {
                   "$ref": "#/definitions/admin_text/definitions/tag"
                 }
               }
             },
-            "type": [
-              "object"
-            ]
+            "type": ["object"]
           },
           "targetSchema": {
             "anyOf": [
               {
-                "type": [
-                  "array"
-                ],
+                "type": ["array"],
                 "items": {
                   "$ref": "#/definitions/admin_text/definitions/tag_with_text"
                 }
@@ -107,133 +89,81 @@
       "title": "Closegap - Check-in",
       "description": "A check-in is a flow of questions that a student is able to answer.",
       "stability": "prototype",
-      "type": [
-        "object"
-      ],
+      "type": ["object"],
       "definitions": {
         "id": {
           "description": "unique check-in identifier",
           "readOnly": true,
-          "type": [
-            "integer"
-          ]
+          "type": ["integer"]
         },
         "user_id": {
           "description": "the check-in user id",
-          "type": [
-            "integer"
-          ]
+          "type": ["integer"]
         },
         "student_id": {
           "description": "the check-in student id",
-          "type": [
-            "integer"
-          ]
+          "type": ["integer"]
         },
         "feeling": {
           "description": "the feeling that the student has chosen at the check-in",
-          "type": [
-            "string"
-          ]
+          "type": ["string"]
         },
         "body_sensations": {
           "description": "the body sensations that the student has chosen at the check-in",
-          "type": [
-            "array"
-          ],
+          "type": ["array"],
           "items": {
-            "type": [
-              "string"
-            ]
+            "type": ["string"]
           }
         },
         "talk_to_adult": {
           "description": "the response to the question if the students want or need to talk to an adult",
-          "type": [
-            "boolean"
-          ]
+          "type": ["boolean"]
         },
         "fuel": {
           "description": "the fuel status indicator (amount of energy) that the student has chosen at check-in",
-          "type": [
-            "string"
-          ],
-          "enum": [
-            "red",
-            "blue",
-            "yellow",
-            "green"
-          ]
+          "type": ["string"],
+          "enum": ["red", "blue", "yellow", "green"]
         },
         "has_eaten": {
           "description": "the response to the question if the student has eaten breackfast or lunch",
-          "type": [
-            "boolean",
-            "null"
-          ]
+          "type": ["boolean", "null"]
         },
         "has_slept": {
           "description": "the response to the question if the student has slept at night",
-          "type": [
-            "boolean",
-            "null"
-          ]
+          "type": ["boolean", "null"]
         },
         "hurt_or_sick": {
           "description": "the response to the question if the student is hurt or sick",
-          "type": [
-            "boolean",
-            "null"
-          ]
+          "type": ["boolean", "null"]
         },
         "ok_at_home": {
           "description": "the response to the question if everything is ok at the student's home",
-          "type": [
-            "boolean",
-            "null"
-          ]
+          "type": ["boolean", "null"]
         },
         "bullied_at_school": {
           "description": "the response to the question if the student is being bullied at school",
-          "type": [
-            "boolean",
-            "null"
-          ]
+          "type": ["boolean", "null"]
         },
         "followed_up": {
           "description": "whether or not someone followed up on the student's request to speak with an adult",
-          "type": [
-            "boolean",
-            "null"
-          ]
+          "type": ["boolean", "null"]
         },
         "followed_up_id": {
           "description": "the id of the caregiver that has followed up on the student's request to speak with an adult",
-          "type": [
-            "integer",
-            "null"
-          ]
+          "type": ["integer", "null"]
         },
         "follower_full_name": {
           "description": "the follower caregiver's full name",
-          "type": [
-            "string",
-            "null"
-          ]
+          "type": ["string", "null"]
         },
         "intervention": {
           "description": "the activity chosen by the student in the intervention question",
-          "type": [
-            "string",
-            "null"
-          ]
+          "type": ["string", "null"]
         },
         "created_at": {
           "description": "the check-in creation date and time",
           "format": "date-time",
-          "type": [
-            "string"
-          ]
+          "type": ["string"]
         },
         "identity": {
           "anyOf": [
@@ -290,9 +220,7 @@
                 "$ref": "#/definitions/check_in/definitions/intervention"
               }
             },
-            "type": [
-              "object"
-            ]
+            "type": ["object"]
           },
           "targetSchema": {
             "anyOf": [
@@ -315,21 +243,15 @@
             "additionalProperties": false,
             "properties": {
               "student_id": {
-                "type": [
-                  "string"
-                ]
+                "type": ["string"]
               }
             },
-            "type": [
-              "object"
-            ]
+            "type": ["object"]
           },
           "targetSchema": {
             "anyOf": [
               {
-                "type": [
-                  "array"
-                ],
+                "type": ["array"],
                 "items": {
                   "$ref": "#/definitions/check_in"
                 }
@@ -350,14 +272,10 @@
             "additionalProperties": false,
             "properties": {
               "followed_up": {
-                "type": [
-                  "boolean"
-                ]
+                "type": ["boolean"]
               }
             },
-            "type": [
-              "object"
-            ]
+            "type": ["object"]
           },
           "targetSchema": {
             "anyOf": [
@@ -438,24 +356,18 @@
       "description": "An error represents a failed action in the API",
       "stability": "prototype",
       "strictProperties": true,
-      "type": [
-        "object"
-      ],
+      "type": ["object"],
       "definitions": {
         "id": {
           "description": "unique identifier of error",
           "readOnly": true,
           "pattern": "^\\w+$",
-          "type": [
-            "string"
-          ]
+          "type": ["string"]
         },
         "message": {
           "description": "message of error",
           "readOnly": true,
-          "type": [
-            "string"
-          ]
+          "type": ["string"]
         },
         "identity": {
           "anyOf": [
@@ -465,8 +377,7 @@
           ]
         }
       },
-      "links": [
-      ],
+      "links": [],
       "properties": {
         "id": {
           "$ref": "#/definitions/error/definitions/id"
@@ -481,45 +392,31 @@
       "title": "Closegap - Shared Student",
       "description": "Shared Student is where it is possible to share students with other caregivers",
       "stability": "prototype",
-      "type": [
-        "object"
-      ],
+      "type": ["object"],
       "definitions": {
         "id": {
           "description": "unique shared student identifier",
           "readOnly": true,
-          "type": [
-            "integer"
-          ]
+          "type": ["integer"]
         },
         "email": {
           "description": "The email of the caregiver who will receive the students",
           "format": "email",
-          "type": [
-            "string"
-          ]
+          "type": ["string"]
         },
         "students_ids": {
           "description": "The ids of the students",
-          "type": [
-            "array"
-          ],
+          "type": ["array"],
           "items": {
-            "type": [
-              "integer"
-            ]
+            "type": ["integer"]
           }
         },
         "ok_response": {
           "description": "an empty response",
-          "type": [
-            "object"
-          ],
+          "type": ["object"],
           "properties": {
             "ok": {
-              "type": [
-                "boolean"
-              ]
+              "type": ["boolean"]
             }
           }
         },
@@ -548,9 +445,7 @@
                 "$ref": "#/definitions/shared_student/definitions/students_ids"
               }
             },
-            "type": [
-              "object"
-            ]
+            "type": ["object"]
           },
           "targetSchema": {
             "anyOf": [
@@ -564,8 +459,7 @@
           }
         }
       ],
-      "properties": {
-      },
+      "properties": {},
       "additionalProperties": false
     },
     "student": {
@@ -573,137 +467,89 @@
       "title": "Closegap - Student",
       "description": "A student is a child that an user can registered in the system",
       "stability": "prototype",
-      "type": [
-        "object"
-      ],
+      "type": ["object"],
       "definitions": {
         "id": {
           "description": "unique student identifier",
           "readOnly": true,
-          "type": [
-            "integer"
-          ]
+          "type": ["integer"]
         },
         "first_name": {
           "description": "the student first name",
-          "type": [
-            "string"
-          ]
+          "type": ["string"]
         },
         "middle_name": {
           "description": "the student middle name",
-          "type": [
-            "string",
-            "null"
-          ]
+          "type": ["string", "null"]
         },
         "last_name": {
           "description": "the student last name",
-          "type": [
-            "string"
-          ]
+          "type": ["string"]
         },
         "birthdate": {
           "description": "the student birthdate",
-          "type": [
-            "string"
-          ]
+          "type": ["string"]
         },
         "homeroom_teacher": {
           "description": "the student homeroom teacher",
-          "type": [
-            "string"
-          ]
+          "type": ["string"]
         },
         "grade": {
           "description": "the student grade",
-          "type": [
-            "string"
-          ]
+          "type": ["string"]
         },
         "gender": {
           "description": "the student gender",
-          "type": [
-            "string"
-          ]
+          "type": ["string"]
         },
         "school_name": {
           "description": "the student school name",
-          "type": [
-            "string",
-            "null"
-          ]
+          "type": ["string", "null"]
         },
         "latest_check_in": {
           "description": "the student today check-ins list",
-          "type": [
-            "null",
-            "object"
-          ],
+          "type": ["null", "object"],
           "targetSchema": {
             "$ref": "#/definitions/check_in"
           }
         },
         "email": {
           "description": "student email that will be used to create a user",
-          "type": [
-            "string",
-            "null"
-          ]
+          "type": ["string", "null"]
         },
         "csv": {
           "description": "base64 csv",
-          "type": [
-            "string"
-          ]
+          "type": ["string"]
         },
         "success": {
           "description": "indicates if the importation was successful",
-          "type": [
-            "boolean"
-          ]
+          "type": ["boolean"]
         },
         "message": {
           "description": "report message",
-          "type": [
-            "string"
-          ]
+          "type": ["string"]
         },
         "students": {
           "description": "list of students",
-          "type": [
-            "array"
-          ]
+          "type": ["array"]
         },
         "owner_full_name": {
           "description": "The full name of the caregiver who created the student",
-          "type": [
-            "string",
-            "null"
-          ]
+          "type": ["string", "null"]
         },
         "owner_role": {
           "description": "The role of the caregiver who created the student",
-          "type": [
-            "string",
-            "null"
-          ]
+          "type": ["string", "null"]
         },
         "owner_id": {
           "description": "User Id who created the student",
-          "type": [
-            "integer"
-          ]
+          "type": ["integer"]
         },
         "caregivers": {
           "description": "The student's caregivers",
-          "type": [
-            "array"
-          ],
+          "type": ["array"],
           "items": {
-            "type": [
-              "object"
-            ]
+            "type": ["object"]
           }
         },
         "identity": {
@@ -723,18 +569,13 @@
           "rel": "instances",
           "schema": {
             "additionalProperties": false,
-            "properties": {
-            },
-            "type": [
-              "object"
-            ]
+            "properties": {},
+            "type": ["object"]
           },
           "targetSchema": {
             "anyOf": [
               {
-                "type": [
-                  "array"
-                ],
+                "type": ["array"],
                 "items": {
                   "$ref": "#/definitions/student"
                 }
@@ -785,9 +626,7 @@
                 "$ref": "#/definitions/student/definitions/latest_check_in"
               }
             },
-            "type": [
-              "object"
-            ]
+            "type": ["object"]
           },
           "targetSchema": {
             "anyOf": [
@@ -837,9 +676,7 @@
                 "$ref": "#/definitions/student/definitions/email"
               }
             },
-            "type": [
-              "object"
-            ]
+            "type": ["object"]
           },
           "targetSchema": {
             "anyOf": [
@@ -860,18 +697,13 @@
           "rel": "self",
           "schema": {
             "strictProperties": true,
-            "properties": {
-            },
-            "type": [
-              "object"
-            ]
+            "properties": {},
+            "type": ["object"]
           },
           "targetSchema": {
             "anyOf": [
               {
-                "type": [
-                  "object"
-                ],
+                "type": ["object"],
                 "properties": {
                   "id": {
                     "$ref": "#/definitions/student/definitions/id"
@@ -934,11 +766,8 @@
           "rel": "self",
           "schema": {
             "strictProperties": true,
-            "properties": {
-            },
-            "type": [
-              "object"
-            ]
+            "properties": {},
+            "type": ["object"]
           },
           "targetSchema": {
             "anyOf": [
@@ -964,16 +793,12 @@
                 "$ref": "#/definitions/student/definitions/csv"
               }
             },
-            "type": [
-              "object"
-            ]
+            "type": ["object"]
           },
           "targetSchema": {
             "anyOf": [
               {
-                "type": [
-                  "object"
-                ],
+                "type": ["object"],
                 "properties": {
                   "success": {
                     "$ref": "#/definitions/student/definitions/success"
@@ -1000,18 +825,13 @@
           "rel": "instance",
           "schema": {
             "additionalProperties": false,
-            "properties": {
-            },
-            "type": [
-              "object"
-            ]
+            "properties": {},
+            "type": ["object"]
           },
           "targetSchema": {
             "anyOf": [
               {
-                "type": [
-                  "object"
-                ],
+                "type": ["object"],
                 "properties": {
                   "success": {
                     "$ref": "#/definitions/student/definitions/success"
