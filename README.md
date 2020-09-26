@@ -96,7 +96,7 @@ Closegap is the first child-facing emotional wellness platform that captures how
     <td align="center">
       <a href="https://www.linkedin.com/in/jeffrey-tang/">
         <img
-          src="https://raw.githubusercontent.com/hack4impact-uiuc/closegap/master/.github/team_pics/jeffrey.jpg"
+          src="https://raw.githubusercontent.com/hack4impact-uiuc/closegap/add-team-pics/.github/team_pics/jeffrey.jpg"
           width="500px"
         />
         <br />
