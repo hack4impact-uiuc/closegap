@@ -108,7 +108,7 @@ Closegap is the first child-facing emotional wellness platform that captures how
     <td align="center">
       <a href="https://www.linkedin.com/in/arman-rafati-6907991b5/">
         <img
-          src="https://raw.githubusercontent.com/hack4impact-uiuc/closegap/master/.github/team_pics/jeffrey.jpg"
+          src="https://raw.githubusercontent.com/hack4impact-uiuc/closegap/add-arman-pic/.github/team_pics/arman.jpg"
           width="500px"
         />
         <br />
