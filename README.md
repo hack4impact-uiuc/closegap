@@ -11,7 +11,7 @@
 
 Educator Premium will be a dashboard designed to help admins on Closegap derive deeper and more meaningful insights from the data of their students. Features such as automated PDF reports, email/text alerts, data vizualization by grade, school, district, etc will be included. Further, user research involving school counselors and teachers will guide our development and design, creating a better-suited application for the problem.
 
-<h2 align="center">Kids Save Ocean</h2>
+<h2 align="center">Closegap</h2>
 
 Closegap is the first child-facing emotional wellness platform that captures how kids feel and helps parents and educators respond.
 
