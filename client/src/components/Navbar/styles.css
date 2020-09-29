@@ -1,0 +1,8 @@
+.nav {
+    background-color: rgb(37, 0, 50);
+    justify-content: space-between;
+}
+
+#nav-logo {
+    padding: 20px 10px;
+}
