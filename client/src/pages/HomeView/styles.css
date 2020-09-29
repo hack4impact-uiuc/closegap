@@ -1,11 +1,11 @@
 body {
-    background-color: rgb(255, 250, 250);
+  background-color: rgb(255, 250, 250);
 }
 
 .title {
-    padding-top: 100px;
-    color: #231d31;
-    font-family: Roboto;
-    font-size: 48px;
-    font-weight: normal;
+  padding-top: 100px;
+  color: #231d31;
+  font-family: Roboto;
+  font-size: 48px;
+  font-weight: normal;
 }
