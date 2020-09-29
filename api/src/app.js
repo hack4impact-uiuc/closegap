@@ -3,10 +3,16 @@ var express = require("express");
 var path = require("path");
 var cookieParser = require("cookie-parser");
 var logger = require("morgan");
+var dotenv = require("dotenv");
 
 var indexRouter = require("./routes/index");
 
 var app = express();
+
+// use config/NODE_ENV.env as config
+dotenv.config({
+  path: path.resolve(__dirname, `../config/${process.env.NODE_ENV}.env`),
+});
 
 // view engine setup
 app.set("views", path.join(__dirname, "views"));

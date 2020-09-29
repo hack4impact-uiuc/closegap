@@ -7,7 +7,7 @@
     "format:check": "prettier --check \"./**/*.{js,jsx,json,md}\"",
     "lint": "eslint \"./**/*.js\"",
     "lint:fix": "eslint --fix \"./**/*.js\"",
-    "start": "nodemon ./src/bin/www"
+    "start": "NODE_ENV=dev nodemon ./src/bin/www"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
