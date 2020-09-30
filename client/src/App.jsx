@@ -1,6 +1,14 @@
 import React from "react";
 import logo from "./logo.svg";
 import "./styles/App.css";
+import { getPeople } from "../src/utils/apiWrapper";
+
+const testAPIWrapper = async () => {
+  const people = await getPeople();
+  console.log(people);
+};
+
+testAPIWrapper();
 
 function App() {
   return (
