@@ -17,7 +17,8 @@
     "express": "~4.16.1",
     "http-errors": "~1.6.3",
     "morgan": "~1.9.1",
-    "nodemon": "^2.0.4"
+    "nodemon": "^2.0.4",
+    "pg": "^8.3.3"
   },
   "devDependencies": {
     "@h4iuiuc/eslint-plugin": "^1.0.12",
