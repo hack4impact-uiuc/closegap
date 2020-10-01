@@ -4,21 +4,17 @@ import PermIdentityIcon from "@material-ui/icons/PermIdentityOutlined";
 import Toolbar from "@material-ui/core/Toolbar";
 import "./styles.css";
 
-const LoginLink = () => {
-  (
-    <a id="nav-login" href="#login">
-      Login
-    </a>
-  );
-};
+const LoginLink = () => (
+  <a id="nav-login" href="#login">
+    Login
+  </a>
+);
 
-const LogoutLink = () => {
-  (
-    <a id="nav-logout" href="#logout">
-      Logout
-    </a>
-  );
-};
+const LogoutLink = () => (
+  <a id="nav-logout" href="#logout">
+    Logout
+  </a>
+);
 
 const ProfileLink = () => {
   // eslint-disable-next-line
