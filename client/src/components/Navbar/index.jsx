@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import AppBar from "@material-ui/core/AppBar";
 import PermIdentityIcon from "@material-ui/icons/PermIdentityOutlined";
 import Toolbar from "@material-ui/core/Toolbar";
-import "./styles.css";
+import "../../styles/Navbar.css";
 
 const LoginLink = () => {
   return (
