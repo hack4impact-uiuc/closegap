@@ -3,7 +3,6 @@ const router = express.Router();
 
 const { getStudentById } = require("../services/student.js");
 
-
 /* GET home page. */
 router.get("/", function (req, res) {
   res.send("Closegap!");
@@ -28,7 +27,7 @@ router.get("/students/:studentId", async (req, res) => {
   }
 
   return res.json(200, {
-    data: student
+    data: student,
   });
 });
 

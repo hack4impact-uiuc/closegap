@@ -52,6 +52,5 @@ yarn && yarn start
 
 ```
 $ curl http://localhost:5000/students/1
-{"data":{"id":"1","user_id":"1","first_name":"Ipsum1","middle_name":"Lorem1","last_name":"Dolor1","birthdate":"2010-11-14T06:00:00.000Z","homeroom_teacher":"Amet1","grade":"1st","gender":"male","created_at":"2020-10-01T09:31:50.910Z","updated_at":"2020-10-01T09:31:50.976Z","school_name":"some school name"}}% 
+{"data":{"id":"1","user_id":"1","first_name":"Ipsum1","middle_name":"Lorem1","last_name":"Dolor1","birthdate":"2010-11-14T06:00:00.000Z","homeroom_teacher":"Amet1","grade":"1st","gender":"male","created_at":"2020-10-01T09:31:50.910Z","updated_at":"2020-10-01T09:31:50.976Z","school_name":"some school name"}}%
 ```
-
