@@ -7,6 +7,7 @@
     "format:check": "prettier --check \"./**/*.{js,jsx,json,md}\"",
     "lint": "eslint \"./**/*.js\"",
     "lint:fix": "eslint --fix \"./**/*.js\"",
+    "test": "cross-env NODE_ENV=test jest --testTimeout=10000",
     "start": "nodemon ./src/bin/www"
   },
   "dependencies": {
@@ -20,7 +21,16 @@
   },
   "devDependencies": {
     "@h4iuiuc/eslint-plugin": "^1.0.12",
+    "cross-env": "^7.0.2",
     "eslint": "^6.8.0",
-    "prettier": "^2.0.5"
+    "jest": "^26.4.2",
+    "prettier": "^2.0.5",
+    "supertest": "^5.0.0"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ]
   }
 }
