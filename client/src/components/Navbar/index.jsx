@@ -36,16 +36,15 @@ const Navbar = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   let loginOptions;
 
-  if (isLoggedIn) {
-    loginOptions = (
-      <div class="right-nav">
-        <ProfileLink />
-        <LogoutLink />
-      </div>
-    );
-  } else {
-    loginOptions = <LoginLink />;
-  }
+  loginOptions = isLoggedIn ? (
+    <div class="right-nav">
+      <ProfileLink />
+      <LogoutLink />
+    </div>
+  ) : (
+    <LoginLink />
+  );
+
   return (
     <div>
       <AppBar>
