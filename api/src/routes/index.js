@@ -21,7 +21,15 @@ router.get("/students/:studentId", async (req, res) => {
     });
   }
 
-  return res.json(200, student);
+  if (student === null) {
+    return res.status(404).json({
+      error: "no student found with given id",
+    });
+  }
+
+  return res.json(200, {
+    data: student
+  });
 });
 
 module.exports = router;
