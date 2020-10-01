@@ -1,6 +1,6 @@
 <!--
-WELCOME TO OUR PULL REQUEST TEMPLATE! :partyparrot:
-Not all sections apply, feel free to delete as appropriate.
+Template credits to from https://github.com/hack4impact-uiuc/life-after-hate
+Shoutout to the wonderful LAH team!
 -->
 
 ## Status:
