@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 
-const { getStudentById } = require("../services/user.js");
+const { getStudentById } = require("../services/student.js");
 
 
 /* GET home page. */
