@@ -35,7 +35,7 @@ const Navbar = () => {
   let loginOptions;
 
   loginOptions = isLoggedIn ? (
-    <div class="right-nav">
+    <div className="right-nav">
       <ProfileLink />
       <LogoutLink />
     </div>
