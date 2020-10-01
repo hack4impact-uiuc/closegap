@@ -1,7 +1,9 @@
 const express = require("express");
-const router = express.Router();
+const { StatusCodes } = require("http-status-codes");
 
 const { getStudentById } = require("../services/student.js");
+
+const router = express.Router();
 
 /* GET home page. */
 router.get("/", function (req, res) {
@@ -15,18 +17,18 @@ router.get("/students/:studentId", async (req, res) => {
   try {
     student = await getStudentById(parseInt(req.params.studentId));
   } catch (e) {
-    return res.status(400).json({
+    return res.status(StatusCodes.BAD_REQUEST).json({
       error: "database error",
     });
   }
 
   if (student === null) {
-    return res.status(404).json({
+    return res.status(StatusCodes.NOT_FOUND).json({
       error: "no student found with given id",
     });
   }
 
-  return res.json(200, {
+  return res.json({
     data: student,
   });
 });
