@@ -1,9 +1,8 @@
 const express = require("express");
+const router = express.Router();
 const { StatusCodes } = require("http-status-codes");
 
 const { getStudentById } = require("../services/student.js");
-
-const router = express.Router();
 
 /* GET home page. */
 router.get("/", function (req, res) {
@@ -28,9 +27,7 @@ router.get("/students/:studentId", async (req, res) => {
     });
   }
 
-  return res.json({
-    data: student,
-  });
+  res.json({ data: student });
 });
 
 module.exports = router;
