@@ -36,6 +36,12 @@ Seed database with initial data? [Y/n] y
 ...
 ```
 
+## Configure App
+
+```
+$ cp config/dev.env.default config/dev.env
+```
+
 ## Install & Run
 
 ```bash
