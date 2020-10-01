@@ -5,7 +5,7 @@ import Toolbar from "@material-ui/core/Toolbar";
 import "./styles.css";
 
 const LoginLink = () => {
-  return (
+  (
     <a id="nav-login" href="#login">
       Login
     </a>
@@ -13,7 +13,7 @@ const LoginLink = () => {
 };
 
 const LogoutLink = () => {
-  return (
+  (
     <a id="nav-logout" href="#logout">
       Logout
     </a>
@@ -21,6 +21,7 @@ const LogoutLink = () => {
 };
 
 const ProfileLink = () => {
+  // eslint-disable-next-line
   const [name, setName] = useState("Person");
   return (
     <div id="nav-profile">
@@ -33,12 +34,13 @@ const ProfileLink = () => {
 };
 
 const Navbar = () => {
+  // eslint-disable-next-line
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   let rightNav;
 
   if (isLoggedIn) {
     rightNav = (
-      <div class="right-nav">
+      <div className="right-nav">
         <ProfileLink />
         <LogoutLink />
       </div>
