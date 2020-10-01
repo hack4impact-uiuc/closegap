@@ -1,4 +1,7 @@
 {
   "plugins": ["@h4iuiuc"],
-  "extends": ["plugin:@h4iuiuc/recommended"]
+  "extends": ["plugin:@h4iuiuc/recommended"],
+  "env": {
+    "jest": true
+  }
 }
