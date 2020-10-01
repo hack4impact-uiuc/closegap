@@ -1,10 +1,10 @@
 import React from "react";
 import "./styles.css";
 
-const HomeView = () => (
+const Home = () => (
   <div>
     <h1 class="title">Welcome</h1>
   </div>
 );
 
-export default HomeView;
+export default Home;

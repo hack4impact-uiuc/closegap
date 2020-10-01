@@ -34,24 +34,24 @@ const ProfileLink = () => {
 
 const Navbar = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  let rightNav;
+  let loginOptions;
 
   if (isLoggedIn) {
-    rightNav = (
+    loginOptions = (
       <div class="right-nav">
         <ProfileLink />
         <LogoutLink />
       </div>
     );
   } else {
-    rightNav = <LoginLink />;
+    loginOptions = <LoginLink />;
   }
   return (
     <div>
       <AppBar>
         <Toolbar classes={{ root: "nav" }}>
           <img id="nav-logo" src="/imgs/logo-white.png" alt="Closegap Logo" />
-          {rightNav}
+          {loginOptions}
         </Toolbar>
       </AppBar>
     </div>
