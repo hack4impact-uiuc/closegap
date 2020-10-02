@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import AppBar from "@material-ui/core/AppBar";
 import PermIdentityIcon from "@material-ui/icons/PermIdentityOutlined";
 import Toolbar from "@material-ui/core/Toolbar";
@@ -16,9 +16,7 @@ const LogoutLink = () => (
   </a>
 );
 
-const ProfileLink = () => {
-  // eslint-disable-next-line
-  const [name, setName] = useState("Person");
+const ProfileLink = ({ name }) => {
   return (
     <div id="nav-profile">
       <PermIdentityIcon id="nav-profile-icon" />
@@ -29,14 +27,12 @@ const ProfileLink = () => {
   );
 };
 
-const Navbar = () => {
-  // eslint-disable-next-line
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+const Navbar = ({ isLoggedIn, name }) => {
   let loginOptions;
 
   loginOptions = isLoggedIn ? (
     <div className="right-nav">
-      <ProfileLink />
+      <ProfileLink name={name} />
       <LogoutLink />
     </div>
   ) : (
