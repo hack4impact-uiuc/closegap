@@ -16,16 +16,14 @@ const LogoutLink = () => (
   </a>
 );
 
-const ProfileLink = ({ name }) => {
-  return (
-    <div id="nav-profile">
-      <PermIdentityIcon id="nav-profile-icon" />
-      <a id="nav-profile-link" href="#profile">
-        Hi {name}
-      </a>
-    </div>
-  );
-};
+const ProfileLink = ({ name }) => (
+  <div id="nav-profile">
+    <PermIdentityIcon id="nav-profile-icon" />
+    <a id="nav-profile-link" href="#profile">
+      Hi {name}
+    </a>
+  </div>
+);
 
 const Navbar = ({ isLoggedIn, name }) => {
   let loginOptions;
