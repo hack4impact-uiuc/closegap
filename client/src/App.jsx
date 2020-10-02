@@ -1,12 +1,14 @@
 import React from "react";
 import Home from "./pages/HomeView";
-import { Navbar } from "./components";
+import { Head } from "./components";
 import "./styles/App.css";
 
 function App() {
+  let name = "Person";
+  let isLoggedIn = false;
   return (
     <div className="App">
-      <Navbar />
+      <Head name={name} isLoggedIn={isLoggedIn} />
       <Home />
     </div>
   );
